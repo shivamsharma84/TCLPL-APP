@@ -1,0 +1,96 @@
+<h2 align="center">Reactive Forms</h2>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="">
+      mobileNumber:
+      <input formControlName="mobileNumber" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      firstName:
+      <input formControlName="firstName" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      middleName: <br />
+      <input formControlName="middleName" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      lastName: <br />
+      <input formControlName="lastName" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      pan: <br />
+      <input formControlName="pan" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      fatherName: <br />
+      <input formControlName="fatherName" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      dob: <br />
+      <input formControlName="dob" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      email: <br />
+      <input formControlName="email" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      gender: <br />
+      <input formControlName="gender" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      pincode: <br />
+      <input formControlName="pincode" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      city: <br />
+      <input formControlName="city" type="text" />
+    </label>
+  </div>
+
+  <div>
+    <label for="">
+      state: <br />
+      <input formControlName="state" type="text" />
+    </label>
+  </div>
+
+  <button align="center">Submit</button>
+
+  <h1
+    *ngIf="
+      responseApi.firstName !== undefined && responseApi.firstName !== null
+    "
+  ></h1>
+  <h3>{{ resultString }}</h3>
+  <h4>leadId = {{ responseApi.leadId }}</h4>
+</form>
